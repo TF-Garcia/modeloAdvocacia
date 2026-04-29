@@ -300,7 +300,7 @@ const Index = () => {
               <div className="mt-6 h-px w-16 bg-primary/30" />
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 Nosso trabalho é construído sobre pilares sólidos. Conheça os
-                diferenciais que tornam a Advocacia Furoni a escolha certa para a
+                diferenciais que tornam a Sua Advocacia a escolha certa para a
                 sua causa.
               </p>
               <Button asChild className="mt-8 rounded-full" size="lg">
