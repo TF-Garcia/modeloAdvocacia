@@ -180,7 +180,7 @@ const Index = () => {
           <div className="max-w-3xl text-primary-foreground animate-fade-in-up">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-xs uppercase tracking-[0.2em] text-white/90 mb-8">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              Advocacia Furoni
+              Sua Advocacia
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-white">
               Defesa Jurídica<br />
