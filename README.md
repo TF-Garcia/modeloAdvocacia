@@ -1,3 +1,3 @@
 # Welcome to your Lovable project
 
-TODO: Document your project here
+This is a padronized page made for lawyers. Later on I will provide more details.

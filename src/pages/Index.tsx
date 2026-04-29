@@ -24,7 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import logo from "@/assets/logo-furoni.png";
+import logo from "@/assets/logo.png";
 import heroLibrary from "@/assets/hero-library.jpg";
 import lawyerPortrait from "@/assets/lawyer-portrait.jpg";
 
@@ -230,7 +230,7 @@ const Index = () => {
             </h2>
             <div className="mt-6 h-px w-16 bg-primary/30" />
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              A Advocacia Furoni é um escritório dedicado à excelência técnica e ao
+              A Sua Advocacia é um escritório dedicado à excelência técnica e ao
               atendimento humano. Com anos de experiência em causas civis,
               trabalhistas, empresariais e previdenciárias, atuamos com estratégia
               clara e foco em soluções concretas para cada cliente.
@@ -435,7 +435,7 @@ const Index = () => {
 
               {[
                 { icon: Phone, label: "Telefone", value: "(11) 99999-9999" },
-                { icon: Mail, label: "Email", value: "contato@advocaciafuroni.com.br" },
+                { icon: Mail, label: "Email", value: "contato@suadvocacia.com.br" },
                 { icon: MapPin, label: "Endereço", value: "Av. Paulista, 1000 — São Paulo/SP" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4 p-6 rounded-2xl border border-border">
@@ -459,8 +459,8 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-10">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3">
-                <img src={logo} alt="Advocacia Furoni" className="h-12 w-auto brightness-0 invert" />
-                <div className="font-serif text-xl text-white">Advocacia Furoni</div>
+                <img src={logo} alt="Sua Advocacia" className="h-12 w-auto brightness-0 invert" />
+                <div className="font-serif text-xl text-white">Sua Advocacia</div>
               </div>
               <p className="mt-5 text-sm text-white/60 max-w-md leading-relaxed">
                 Escritório de advocacia comprometido com a excelência técnica, a
@@ -497,7 +497,7 @@ const Index = () => {
               <div className="text-xs uppercase tracking-[0.2em] text-white font-medium">Contato</div>
               <ul className="mt-5 space-y-3 text-sm text-white/60">
                 <li>(11) 99999-9999</li>
-                <li>contato@advocaciafuroni.com.br</li>
+                <li>contato@advocacia.com.br</li>
                 <li>Av. Paulista, 1000 — São Paulo/SP</li>
                 <li className="pt-3 text-white/40 text-xs">OAB/SP 000.000</li>
               </ul>
@@ -505,7 +505,7 @@ const Index = () => {
           </div>
 
           <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
-            <div>© {new Date().getFullYear()} Advocacia Furoni. Todos os direitos reservados.</div>
+            <div>© {new Date().getFullYear()} Sua Advocacia. Todos os direitos reservados.</div>
             <div>Conteúdo de caráter informativo — em conformidade com o Provimento 205/2021 OAB.</div>
           </div>
         </div>
