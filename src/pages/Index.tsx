@@ -105,7 +105,7 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
         <div className="container mx-auto flex h-20 items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Advocacia Furoni" className="h-12 w-auto" />
+            <img src={logo} alt="Sua Advocacia" className="h-12 w-auto" />
             <span className="hidden sm:flex flex-col leading-tight">
               <span className="font-serif text-lg font-semibold text-primary">Sua Advocacia</span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
