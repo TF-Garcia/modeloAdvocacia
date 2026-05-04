@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   Scale,
   Briefcase,
-  Building2,
   ShieldCheck,
   Phone,
   Mail,
@@ -19,6 +18,9 @@ import {
   X,
   ArrowRight,
   Quote,
+  Paperclip,
+  Pencil,
+  HammerIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,58 +28,56 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import heroLibrary from "@/assets/hero-library.jpg";
-import lawyerPortrait from "@/assets/lawyer-portrait.jpg";
+import lawyerPortrait from "@/assets/lawyer-portrait.jpeg";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
+const WHATSAPP_URL = "https://wa.me/15996548560?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const areas = [
   {
     icon: Scale,
-    title: "Direito Civil",
-    desc: "Contratos, indenizações, família e sucessões com a segurança jurídica que você precisa.",
+    title: "Planejamento Previdenciário",
+    desc: "Planejamento previdenciário para servidores públicos de Regimes Próprios de Previdência Social e segurados do Regime Geral de Previdência Social.",
   },
   {
     icon: Briefcase,
-    title: "Direito Trabalhista",
-    desc: "Defesa de direitos do trabalhador e consultoria preventiva para empresas.",
-  },
-  {
-    icon: Building2,
-    title: "Direito Empresarial",
-    desc: "Estruturação societária, contratos e consultoria estratégica para negócios.",
+    title: "Beneficios Previdenciários",
+    desc: "Atua com benefícios de aposentadorias urbanas, e, pensão por morte.",
   },
   {
     icon: ShieldCheck,
-    title: "Direito Previdenciário",
-    desc: "Aposentadorias, revisões e benefícios do INSS com acompanhamento dedicado.",
+    title: "Isenção de Imposto de Renda",
+    desc: "Pedidos administrativos e judiciais de isenção de imposto de renda para aposentados e pensionistas portadores de doenças graves relacionadas no art. 6º,  inciso XIV da Lei nº 7.713/88.",
   },
 ];
 
 const differentials = [
-  { icon: HandshakeIcon, title: "Atendimento Personalizado", desc: "Cada cliente é tratado com escuta atenta e estratégia sob medida." },
-  { icon: Clock, title: "Agilidade e Eficiência", desc: "Respostas rápidas e acompanhamento ativo de cada processo." },
-  { icon: Award, title: "Experiência Comprovada", desc: "Atuação consistente com resultados sólidos para clientes e empresas." },
-  { icon: Eye, title: "Total Transparência", desc: "Comunicação clara em cada etapa, sem promessas vazias." },
+  { icon: HandshakeIcon, title: "Atendimento Personalizado", desc: "Consultoria direta com a advogada responsável." },
+  { icon: Clock, title: "Análise Detalhada", desc: "Análise detalhada do CNIS e histórico contributivo." },
+  { icon: Award, title: "Experiência Comprovada", desc: "Experiência de mais de 30 anos como servidora pública do INSS" },
+  { icon: Eye, title: "Simulações Realistas", desc: "Simulação de cenários de aposentadoria" },
+  { icon: Paperclip, title: "Relatórios Personalizados", desc: "Elaboração de relatório completo e personalizado" },
+  { icon: Pencil, title: "Estratégias Individualizadas", desc: "Estratégia individualizada de contribuições futuras" },
+  { icon: HammerIcon, title: "Ampla Área de Atuação", desc: "Atuação nas esferas administrativa e judicial" },
 ];
 
 const testimonials = [
   {
-    name: "Mariana Lopes",
-    role: "Empresária",
+    name: "Maria Regina Carvalho Guedes",
+    role: "Avaliação Google",
     quote:
-      "Atendimento impecável. A equipe conduziu meu caso com seriedade e me manteve informada do início ao fim.",
+      "Foi uma imensa satisfação entrar em contato com a Dra Vera! Profissional impecável, tirou minhas dúvidas e me orientou perfeitamente em tudo que eu precisava com relação á aposentadoria! Muito competente, atenciosa e dedicada!",
   },
   {
-    name: "Roberto Almeida",
-    role: "Cliente Particular",
+    name: "Franklin Stefanelli",
+    role: "Avaliação Google",
     quote:
-      "Profissionalismo e estratégia. Resolveram uma questão complexa com agilidade e transparência total.",
+      "Vera é uma profissional diferenciada, humana, muito competente, prestativa e sempre disponível. Sempre que precisar de qualquer assessoria jurídica, ela será a minha advogada. Recomendo!",
   },
   {
-    name: "Camila Ferreira",
-    role: "Diretora Financeira",
+    name: "Giovana Tozzi",
+    role: "Avaliação Google ",
     quote:
-      "Recomendo sem hesitar. Excelente assessoria jurídica empresarial, sempre disponíveis e precisos.",
+      "Atendimento diferenciado da Dra Vera, muito atenciosa. Me explicou do início ao fim sobre tudo que deveria saber, me auxiliou. Profissional impecável, parabéns. Que Deus abençoe muito pela capacidade como lida com cada detalhe.",
   },
 ];
 
@@ -105,19 +105,19 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
         <div className="container mx-auto flex h-20 items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Sua Advocacia" className="h-12 w-auto" />
+            <img src={logo} alt="Advocacia Vera Vieira" className="h-12 w-auto" />
             <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-serif text-lg font-semibold text-primary">Sua Advocacia</span>
+              <span className="font-serif text-lg font-semibold text-primary">Vera Vieira</span>
               <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                Estratégia &amp; Confiança
+                  Advocacia &amp; Consultoria Jurídica
+                </span>
               </span>
-            </span>
-          </a>
+            </a>
 
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
+            <nav className="hidden lg:flex items-center gap-8">
+              {navLinks.map((l) => (
+                <a
+                  key={l.href}
                 href={l.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
@@ -180,11 +180,11 @@ const Index = () => {
           <div className="max-w-3xl text-primary-foreground animate-fade-in-up">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-xs uppercase tracking-[0.2em] text-white/90 mb-8">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-              Sua Advocacia
+              Vera Vieira
             </span>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-white">
-              Defesa Jurídica<br />
-              <span className="italic font-normal text-white/90">Estratégica e Confiável</span>
+              Aposentadoria Fácil<br />
+              <span className="italic font-normal text-white/90">Advocacia e Consultoria Jurídica</span>
             </h1>
             <p className="mt-6 text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
               Atuação técnica e personalizada para proteger seus direitos e oferecer
@@ -230,15 +230,25 @@ const Index = () => {
             </h2>
             <div className="mt-6 h-px w-16 bg-primary/30" />
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              A Sua Advocacia é um escritório dedicado à excelência técnica e ao
+              A Advocacia Vera Vieira é um escritório dedicado à excelência técnica e ao
               atendimento humano. Com anos de experiência em causas civis,
-              trabalhistas, empresariais e previdenciárias, atuamos com estratégia
+              trabalhistas e previdenciárias, atuamos com estratégia
               clara e foco em soluções concretas para cada cliente.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Acreditamos que cada caso merece estudo aprofundado, comunicação
               direta e total transparência. Esse compromisso é a base da
               confiança construída com nossos clientes ao longo dos anos.
+            </p>
+
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              O atendimento é realizado mediante agendamento prévio, com possibilidade de:
+            </p>
+
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Atendimento presencial realizado em Sorocaba;<br />
+              Atendimento online para todo o Brasil;<br />
+              Formalização contratual por meio digital, com total segurança jurídica.
             </p>
 
             <div className="mt-10 grid grid-cols-3 gap-6">
@@ -271,7 +281,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {areas.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
@@ -300,7 +310,7 @@ const Index = () => {
               <div className="mt-6 h-px w-16 bg-primary/30" />
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 Nosso trabalho é construído sobre pilares sólidos. Conheça os
-                diferenciais que tornam a Sua Advocacia a escolha certa para a
+                diferenciais que tornam a Advocacia Vera Vieira a escolha certa para a
                 sua causa.
               </p>
               <Button asChild className="mt-8 rounded-full" size="lg">
@@ -434,9 +444,9 @@ const Index = () => {
               </a>
 
               {[
-                { icon: Phone, label: "Telefone", value: "(11) 99999-9999" },
-                { icon: Mail, label: "Email", value: "contato@suadvocacia.com.br" },
-                { icon: MapPin, label: "Endereço", value: "Av. Paulista, 1000 — São Paulo/SP" },
+                { icon: Phone, label: "Telefone", value: "(15) 99654-8560" },
+                { icon: Mail, label: "Email", value: "vieiraver@gmail.com" },
+                { icon: MapPin, label: "Endereço", value: "Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4 p-6 rounded-2xl border border-border">
                   <div className="h-12 w-12 rounded-xl bg-secondary flex items-center justify-center">
@@ -459,8 +469,8 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-10">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3">
-                <img src={logo} alt="Sua Advocacia" className="h-12 w-auto brightness-0 invert" />
-                <div className="font-serif text-xl text-white">Sua Advocacia</div>
+                <img src={logo} alt="Advocacia Vera Vieira" className="h-12 w-auto brightness-0 invert" />
+                <div className="font-serif text-xl text-white">Advocacia Vera Vieira</div>
               </div>
               <p className="mt-5 text-sm text-white/60 max-w-md leading-relaxed">
                 Escritório de advocacia comprometido com a excelência técnica, a
@@ -496,16 +506,16 @@ const Index = () => {
             <div>
               <div className="text-xs uppercase tracking-[0.2em] text-white font-medium">Contato</div>
               <ul className="mt-5 space-y-3 text-sm text-white/60">
-                <li>(11) 99999-9999</li>
-                <li>contato@advocacia.com.br</li>
-                <li>Av. Paulista, 1000 — São Paulo/SP</li>
-                <li className="pt-3 text-white/40 text-xs">OAB/SP 000.000</li>
-              </ul>
+                <li>(15) 99654-8560</li>
+                <li>vieiraver@gmail.com</li>
+                <li>Rua Manoel Ortiz Rodrigues, 175 - Cond. Ibiti Royal Park - Sorocaba/SP</li>
+                <li className="pt-3 text-white/40 text-xs">OAB/SP 347.139</li>
+              </ul> 
             </div>
           </div>
 
           <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
-            <div>© {new Date().getFullYear()} Sua Advocacia. Todos os direitos reservados.</div>
+            <div>© {new Date().getFullYear()} Advocacia Vera Vieira. Todos os direitos reservados.</div>
             <div>Conteúdo de caráter informativo — em conformidade com o Provimento 205/2021 OAB.</div>
           </div>
         </div>
